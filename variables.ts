@@ -1,4 +1,4 @@
-var x : number = 10;
+/*var x : number = 10;
 var y : number;
 alert(x);
 
@@ -48,3 +48,42 @@ temp="test";
 temp= 10;
 temp=false;
 console.log(temp);
+
+*/
+import { isPalindrom } from "./utils";
+console.log(isPalindrom('madam'));
+console.log(isPalindrom('madan'));
+
+import { Add, Mul, Sub, div } from "./calculator";
+console.log(Add(12,22));
+console.log(Sub(22,1));
+console.log(div(44,1));
+console.log(Mul(12,12));
+
+class student {
+    public readonly UserName : string;
+
+}
+
+var objStudent= new student();
+//objStudent.UserName="Kavita sahu";
+
+
+//static
+export class Check {
+    static bankName: string = "SBI";
+     customerName: string;
+     actNumber: number;
+ constructor(customerName: string,actNumber: number){
+     this.customerName=customerName;
+     this.actNumber=actNumber;
+ }
+     display(){
+         console.log(Check.bankName)
+     }
+ }
+ 
+ //object
+ var check = new Check("test",213);
+ Check.bankName="BOA";
+ check.display();
